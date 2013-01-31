@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>TWSS button<title>
+		<title>TWSS button</title>
 		<meta name="description" content="Thats what she said button">
 		<meta name="author" content="Clark Kent">
 		<meta name="keywords" content="sound clip, twss, thats what she said,
@@ -14,13 +14,24 @@
 		<header>
 		    <h2 style="text-align:center;">TWSS</h2>
 		</header>
-		<article style="width:70%;margin:0 auto;">
-		    <audio controls>
-			    <source src="test.ogg" type="audio/ogg">
+		<article style="text-align:center;">
+		    <audio id="myAudio">
+			<source src="test.ogg" type="audio/ogg">
 		    	<source src="track39.mp3" type="audio/mp3"
 		        Your browser does not support the audio element, please update
-				to a newer version.
-			</audio>
+		         to a newer version.
+		    </audio>
+		    <button type="button" onclick="aud_play_pause()">Play/Pause</button>
+                    <script>
+                        function aud_play_pause() {
+                            var myAudio = document.getElementById("myAudio");
+                            if (myAudio.paused) {
+                            myAudio.play();
+                            } else {
+                            myAudio.pause();
+                            }
+                        }
+                    </script>
 		</article>
 		<footer>
 		    &copy; Your name here
